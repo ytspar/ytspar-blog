@@ -9,5 +9,6 @@ gem "RedCloth"
 
 group :development do
   gem "heroku"
+  gem "unicorn"
 end
 
