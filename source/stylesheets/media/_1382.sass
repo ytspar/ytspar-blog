@@ -1,0 +1,30 @@
+// 1382 Grid -----------------------------------------------------------------
+
+$total-cols         : 16
+$col-width          : 4em
+$gutter-width       : 1em
+$side-gutter-width  : $gutter-width
+
+/* Root --------------------------------------------------------------------
+
+@include root
+
+/* Layout ------------------------------------------------------------------
+
+.container[role="main"]
+  hgroup
+    @include pad(8,1)
+    @include full
+  .archive
+    @include columns(2)
+    @include pad(0,6)
+    @include alpha
+    p a
+      margin-left: 2.5em    
+  .content
+    @include columns(7)
+    @include pad(0,1)
+    @include omega
+
++header
++footer  

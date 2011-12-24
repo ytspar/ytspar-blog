@@ -1,0 +1,23 @@
+// 480 Grid ------------------------------------------------------------------
+
+$total-cols         : 4
+$col-width          : 4em
+$gutter-width       : 1em
+$side-gutter-width  : 1em
+
+/* Root --------------------------------------------------------------------
+
+@include root
+
+/* Layout ------------------------------------------------------------------
+
+.container[role="main"]
+  hgroup
+    @include full
+  .archive
+    @include full
+  .content
+    +adjust-font-size-to(13px)
+    +adjust-leading-to(1)
+    @include full
++footer

@@ -1,0 +1,111 @@
+// Imports -------------------------------------------------------------------
+
+@import compass
+@import compass/layout
+@import susy
+@import blueprint/fancy-type
+
+// Reversed?
+$reversed-text: false
+@import "modules/utility"
+
+// Settings ------------------------------------------------------------------
+
+$legacy-support-for-ie6         : false
+$legacy-support-for-ie7         : false !default
+$legacy-support-for-ie8         : false !default
+$ie                             : false !default
+
+$show-column-grid-backgrounds   : true
+$show-baseline-grid-backgrounds : false
+$show-grid-backgrounds          : true
+
+// Base Font
+$base-font-family: "Helvetica Neue", Hevetica, Arial, sans-serif
+$base-font-size   : 16px
+$base-line-height : $base-font-size*2.1
+
+// Fixed Font
+$fixed-font-family: Monaco, "Andale Mono", "Lucida Console", monospace
+$fixed-font-size: 85%
+$fixed-line-height: $base-line-height
+
+// Text Colors
+$text-color: #3F3F3F
+$loud-color: strengthen($text-color)
+$quiet-color: soften($text-color, 1.5)
+$header-color: strengthen($text-color, 0.66)
+
+// Link Colors
+$link-color: $text-color
+$link-visited-color: soften($text-color, 0.5)
+$link-hover-color: #f66933
+
+// Theme Colors
+$background-color: #E9E6E8
+$banner-color: $background-color
+
+// Paragraphs
+$indented-paragraphs: false
+
+// Layout
+$body-margin-x: 15%
+
+// Border Radius
+$default-border-radius: 8px
+
+$holmesred: #8A1F11
+
+@import modules/all
+
+html, body
+  background: $background-color
+body
+  @include base-font
+
+// Mixins --------------------------------------------------------------------
+
+=root
+  .container
+    +container
+    //+susy-grid-background
+  
+=footer
+  footer
+    #hcard-yury-tsukerman.author.vcard
+      p.no-copyright
+        background-position: top left
+        width: 195px
+
+=header
+  body h1
+    padding-bottom: 2em
+    a
+      height: 84px
+      margin-top: 80px
+      margin-bottom: 20px
+
+=hpadding($l:rhythm(),$r:$l)
+  padding:
+    left: $l
+    right: $r
+
+=gone
+  position: absolute
+  clip: rect(0 0 0 0)
+  overflow: hidden
+  margin: -1px
+  padding: 0
+  height: 1px
+  width: 1px
+  border: 0
+
+=oncall
+  +gone
+  &:active, &:focus
+    position: static
+    clip: auto
+    overflow: visible
+    height: auto
+    margin: 0
+    width: auto

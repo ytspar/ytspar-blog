@@ -1,0 +1,25 @@
+// Layout ------------------------------------------------------------------
+
+@import partials/defaults
+
+// 480px ---------------------------------------------------------------------
+@media only screen and (min-width: 480px) and (max-width: 768px)
+  @import media/480
+
+// 768px  --------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 992px)
+  @import media/768
+
+// 992px ---------------------------------------------------------------------
+@media only screen and (min-width: 992px) and (max-width: 1382px)
+  @import media/992
+  //@import media/1382
+
+// 1382px --------------------------------------------------------------------
+@media only screen and (min-width: 1382px)
+  @import media/1382
+
+// 2x ------------------------------------------------------------------------
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+    @import media/2x
+

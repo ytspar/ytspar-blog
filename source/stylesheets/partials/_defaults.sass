@@ -1,0 +1,311 @@
+// Imports -------------------------------------------------------------------
+
+@import partials/base
+@import partials/content
+
+/* Root ----------------------------------------------------------------------
+
++establish-baseline
+
+
+body
+  @extend .serif
+  margin-bottom: 0
+
+html
+  //background: #ECE9EB url("/images/background.png") repeat
+  background: inline-image("ytspar-hedcut.png", 'image/png') no-repeat bottom left, inline-image("background.png", 'image/png') repeat
+  border-bottom: 2px solid #331E12  
+  @extend .font-helvetica
+  
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  
+body
+  background: transparent
+  h1
+    background: url("/images/horizontal-rule.png") repeat-x bottom
+    padding-bottom: 1em
+    a
+      display: block
+      +replace-text-with-dimensions("yury-tsukerman.png")
+      font-weight: bold
+      height: 45px
+      background-position: top left
+
+a
+  font-style: italic
+  +basic-link
+
+.container[role="main"]
+  padding: 0 rhythm(.5)
+  .archive
+    a
+      margin: 2.5em 0 2em 0
+      display: block  
+  .content
+    +min-height(1200px)
+    h2
+      color: #535353
+      +single-text-shadow(#FFF, 0, 2px, 0)
+      a
+        font-style: normal
+        text-decoration: none
+    h3, time
+      color: #848484
+      font-weight: normal
+      font-style: italic
+      font-size: 1em
+    h2 + h3, h2 + time
+      margin-top: -1.9em
+      margin-bottom: 1.25em
+      display: block
+    h4
+      @extend p
+      +adjust-leading-to(0.8)
+
+footer
+  @include full
+  @include pad(0,1)
+  margin-top: 10em
+  border-bottom: 1px solid #FFF
+  height: 110px
+  p
+    color: #8A1F11
+    font-weight: bold
+    margin-left: 5em
+    margin-bottom: 0.5em
+  #hcard-yury-tsukerman.author.vcard
+    margin-left: 4em
+    a.fn.url
+      +replace-text-with-dimensions("ytspar-twitter.png")
+      display: block
+    p.no-copyright
+      +replace-text-with-dimensions("no-copyright-public-domain.png")
+      background-position: top left
+      width: 95px
+p
+  margin-bottom: 1.75em
+
+ul
+  list-style: disc
+  margin-bottom: 15px
+  li
+    line-height: 1.5
+
+h4 span, strong span, .meta span, aside ol li, p.colophon a.my
+  background-image: url("/images/highlight.png")
+  background-repeat: repeat-x
+  background-position: 5% 50%
+  
+hr
+  color: #FFF
+  //+single-box-shadow(#FFF, 0, 1px, 1px)
+
+p.colophon
+  font-size: 0.9em
+  margin-left: 11em
+  font-weight: normal
+  display: none
+  position: absolute
+  a
+    background-color: yellow
+    display: inline-block
+    font-size: 0.8em
+    font-weight: normal
+    margin: 0 0.5em 1em
+    &.my
+      background-color: $holmesred
+
+/* Disqus
+
+#disqus_thread
+  margin-top: 3em
+
+#dsq-pagination, .dsq-trackback-url, .dsq-comment-footer
+  font-size: 0.8em
+
+#dsq-content ul#dsq-comments
+  margin: 3em 0
+
+/* Headings ------------------------------------------------------------------
+
+h2, h3, h4, h5, h6
+  +trailer
+
+h1
+  +adjust-font-size-to(36px)
+  +trailer(1,72px)
+  text-align: center
+  font-weight: bold
+
+h2
+  @extend .allcaps
+
+h5, h6
+  font-style: italic
+  
+/* Inline --------------------------------------------------------------------
+
+cite, em, dfn, address, i
+  font-style: italic
+
+strong, dfn, b
+  font-weight: bold
+
+sup, sub
+  position: relative
+  font-size: smaller
+  line-height: 0
+
+sup
+  top: -.5em
+
+sub
+  bottom: -.25em
+
+abbr, acronym
+  border-bottom: 1px dotted
+  cursor: help
+
+ins
+  text-decoration: underline
+
+del
+  text-decoration: line-through
+
+mark
+  background: #ff9
+  background-color: rgba(#ff0,.5)
+  text-shadow: none
+
+small
+  +adjust-font-size-to(12px)
+
+q
+  font-style: italic
+  em
+    font-style: normal
+
+pre, code, tt
+  @extend .mono
+
+/* Block ---------------------------------------------------------------------
+
+.content
+  p
+    +trailer
+
+  pre
+    padding: rhythm()
+    white-space: pre
+    white-space: pre-wrap
+    white-space: pre-line
+    word-wrap: break-word
+
+  blockquote
+    padding: 0
+    margin: 2em 0
+    font-style: italic
+    background-color: #E1E1E0
+    p
+      padding: 0.5em 1em
+  
+  .box
+    p
+      padding: 0
+      margin: 0.5em 0
+  
+/* Replaced ------------------------------------------------------------------
+
+figure
+  img, object, embed
+    vertical-align: top
+    max-width: 100%
+
+.ie7
+  img
+    -ms-interpolation-mode: bicubic 
+
+/* Lists ---------------------------------------------------------------------
+
+=no-style-list
+  +reset-box-model
+  +no-bullets
+
+.content
+  ol, ul
+    margin-left: 0
+    padding-left: 0
+    list-style-position: outside
+    li > ol, li > ul
+      margin-left: 0.5em
+      color: soften($text-color, 0.25)
+
+  ol
+    list-style-type: decimal
+
+  ul
+    list-style-type: disc
+
+  dt
+    font-style: italic
+
+  dd, dt
+    margin-left: 0
+    padding-left: 0.5em
+
+  ul.archives, aside ol
+    +no-style-list
+    
+  aside ol, aside ol li
+    margin-left: 0
+    padding-left: 0
+    width: 80%
+    font-style: italic
+    font-size: 1em
+    color: soften($text-color, 0.9)
+  aside ol li
+    padding: 0.5em
+    margin-left: 1em
+    font-family: $alternate-text-font
+    text-transform: lowercase
+    span
+      margin: 0 0.5em
+
+nav
+  ul
+    +no-style-list
+
+/* Tables --------------------------------------------------------------------
+
+table
+  +trailer
+  width: 100%
+  border-collapse: separate
+  border-spacing: 0
+  td
+    color: soften($text-color, 0.5)
+
+table, td, th
+  vertical-align: top
+
+th, thead th, tbody th
+  font-weight: bold
+
+th, td, caption
+  padding: rhythm(.5)
+  text-align: left
+  font-weight: normal
+
+table, th
+  +trailing-border(1px, 0.5)
+  border-color: soften($text-color, 1.75)
+
+tfoot
+  +adjust-font-size-to(14px)
+
+caption
+  @extend .allcaps

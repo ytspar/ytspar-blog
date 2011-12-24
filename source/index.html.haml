@@ -1,0 +1,8 @@
+- data.blog.articles[0...5].each_with_index do |article, i|
+  %article{:class => (i == 0) ? 'first' : ''}
+    %h2
+      %a{:href => article.url}= article.title
+    %h3= article.date.strftime('%b %e %Y')
+    %h4= article.summary
+    .more
+      %a{:href => article.url} read on »

@@ -1,0 +1,7 @@
+%h2 Archive:
+%h3 &nbsp;
+%ul.archives
+  - for entry in data.blog.articles
+    %li
+      %a{:href => entry.url}= entry.title
+      %span= entry.date.strftime('%b %e')

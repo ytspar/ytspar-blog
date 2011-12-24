@@ -1,0 +1,71 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}
+    -# <meta name="description" content="">
+    %meta{:content => "Yury Tsukerman", :name => "author"}
+    
+    / Mobile viewport optimization
+    %meta{:content => "True", :name => "HandheldFriendly"}
+    %meta{:content => "320", :name => "MobileOptimized"}
+    %meta{:content => "width=device-width, target-densitydpi=160dpi, initial-scale=1", :name => "viewport"}
+    
+    / iOS
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}
+    %meta{:content => "black-translucent", :name => "apple-mobile-web-app-status-bar-style"}
+    %link{:href => "/images/favicons/splash.png", :rel => "apple-touch-startup-image"}
+    
+    / favicon.ico
+    %link{:href => "/images/favicons/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "/images/favicons/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
+    %link{:href => "/images/favicons/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
+    %link{:href => "/images/favicons/apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed"}
+    
+    / Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading
+    %meta{:content => "on", "http-equiv" => "cleartype"}
+    
+    -# Google Setup
+    -# %meta{:content => "VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=", :name => "verify-v1"}
+
+    - if is_blog_article?
+      %title
+        = current_article_title
+        &laquo; Yury Tsukerman
+    - else
+      %title Master Blogger &laquo; Yury Tsukerman    
+
+    /[if (IE 7)|(IE 8)]
+      %link{:rel => "stylesheet", :href => "/stylesheets/ie.css"}
+    = stylesheet_link_tag("screen")
+    %link{:href => "/stylesheets/print.css", :media => "print", :rel => "stylesheet"}
+    
+    = javascript_include_tag("/javascripts/jquery-1.7.1.min.js", "/javascripts/modernizr-1.6.min.js", "/javascripts/modernizr.selectors.js", "/javascripts/application.js")
+
+
+  %body
+    .container{:role => "main"}
+      %hgroup
+        %header{:role => "banner"}
+          %h1
+            %a{:href => "/"} Yury Tsukerman
+      - unless request.path_info == "archives/index.html"
+        .archive
+          %p
+            %a{:href => "/archives"} Archives
+      .content
+        - if is_blog_article?
+          - content_for :blog_article, yield
+          = partial settings.blog_article_template
+        - else
+          = yield
+
+    %footer#footer{:role => "contentinfo"}
+      #hcard-yury-tsukerman.author.vcard
+        %p
+          %a.fn.url{:href => "http://twitter.com/ytspar"} @ytspar
+        %p.no-copyright No copyright. Public domain. 
+    = partial :colophon
+    = partial :google_analytics
+    / JavaScript
+    = javascript_include_tag("/javascripts/local.js")
