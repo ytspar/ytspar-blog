@@ -64,6 +64,7 @@ GEM
       thor (~> 0.14.0)
       tilt (~> 1.3.1)
       uglifier (~> 1.0.0)
+    middleman-blog (0.1.5)
     middleman-livereload (0.2.1)
       guard-livereload (~> 0.3.1)
     mime-types (1.17.2)
@@ -122,5 +123,6 @@ DEPENDENCIES
   compass-susy-plugin
   heroku
   middleman (~> 2.0.14)
+  middleman-blog
   rack-contrib
   therubyracer-heroku
