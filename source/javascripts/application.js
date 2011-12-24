@@ -14,4 +14,8 @@ $(document).ready(function() {
     }
     return false;
   });
+  $('footer a').click(function(event){
+      event.stopImmediatePropagation();
+  });  
+
 });
