@@ -5,6 +5,7 @@ gem "middleman-blog"
 gem "compass-susy-plugin"
 gem "rack-contrib"
 gem "therubyracer-heroku"
+gem "RedCloth"
 
 group :development do
   gem "heroku"
