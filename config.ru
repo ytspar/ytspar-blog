@@ -21,5 +21,5 @@ run lambda { [404, {'Content-Type' => 'text/html'}, ['whoops! Not Found']] }
 # use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html', 'index.html', '/index.html']
 
 # Cache static assets
-# require "rack/contrib/static_cache"
-# use Rack::StaticCache, :urls => ['/'], :root => 'build'
+require "rack/contrib/static_cache"
+use Rack::StaticCache, :urls => ['/'], :root => 'build'
