@@ -1,4 +1,4 @@
-set :build_dir, "tmp"
+set :build_dir, "public"
 
 require "susy"
 
