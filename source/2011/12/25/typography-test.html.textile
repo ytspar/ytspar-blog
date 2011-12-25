@@ -1,6 +1,6 @@
 --- 
 title: "Typography test"
-date: 01/01/2011
+date: 12/25/2011
 ---
 
 <h4>Proin enim erat, imperdiet ut pellentesque at, adipiscing quis dolor. Curabitur aliquet urna vel mi mattis nec aliquet velit ornare. Quisque hendrerit gravida purus nec tristique. Praesent adipiscing mi quis magna pulvinar molestie. Mauris porttitor est et enim egestas at rhoncus sem aliquam.</h4>
@@ -14,13 +14,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
   Phasellus semper tincidunt hendrerit. Praesent tincidunt rhoncus mi, sagittis venenatis risus dictum id. Suspendisse imperdiet, sem eu lacinia sagittis, orci augue luctus velit, vitae aliquam arcu tortor vitae lorem. Praesent consectetur vehicula turpis et hendrerit.
 </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, imperdiet sit amet ultricies ac, varius vitae orci. Pellentesque fermentum, eros id fermentum egestas, purus leo varius nisl, ut vestibulum eros massa at arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras bibendum ligula faucibus erat suscipit pharetra. Sed vitae felis nec lorem tristique condimentum ac sit amet risus. In hac habitasse platea dictumst. Donec mi leo, mattis vitae condimentum ultricies, vulputate sit amet purus. Suspendisse eget tellus elit. Donec nunc lorem, pharetra non vestibulum eu, facilisis sit amet nisl. Maecenas nec tellus dui. Morbi non neque at mi tincidunt porttitor.
-
-Curabitur aliquet tempus eros, nec accumsan lacus venenatis eget. In eu erat quis lacus sagittis vehicula a id est. Maecenas vel tellus sit amet ligula consequat elementum. Maecenas vel justo sed massa vestibulum gravida. Nunc sit amet nulla ac urna porta cursus. Vestibulum tristique leo eget sem tincidunt eget interdum velit volutpat. In hac habitasse platea dictumst. Vestibulum quis cursus purus. Donec sit amet ipsum nulla, at pharetra libero. Donec luctus turpis sit amet arcu auctor sed tincidunt velit sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Aliquam quis justo tortor. Vestibulum mi dolor, molestie ut ultricies eu, luctus nec turpis. Quisque dui augue, fermentum vel dapibus sit amet, rutrum eget risus. Nunc tempor, enim in pharetra bibendum, enim mauris posuere nisi, sed adipiscing nisl nulla ut enim. Sed eget sem nunc, eu ultrices tortor. Aliquam fermentum pellentesque nibh ornare egestas. Sed quis vulputate nulla. Nam et libero et dui rhoncus placerat a et velit. Fusce nisi velit, adipiscing at mattis sit amet, pellentesque nec mi. Praesent sagittis tellus leo, nec auctor elit. Nulla faucibus consequat ornare. Nunc eleifend pretium accumsan. Vivamus blandit hendrerit sem vitae iaculis. Vivamus congue, leo et ullamcorper auctor, tortor risus pulvinar dolor, nec iaculis odio felis a nunc. Donec est felis, accumsan id vestibulum sit amet, eleifend at sem.
-
-Nulla ut odio blandit magna molestie congue sed et urna. Quisque sed consequat mi. Quisque eu leo justo, eget molestie purus. In facilisis dictum ante, in tincidunt ante eleifend non. Curabitur a neque in purus volutpat tristique nec sit amet odio. Donec eget risus enim, id dapibus lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+<%= lorem.paragraphs 10 %>
 
 <h2>Tests for common HTML elements</h2>
 <hr>

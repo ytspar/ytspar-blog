@@ -2,7 +2,8 @@
   %article{:class => (i == 0) ? 'first' : ''}
     %h2
       %a{:href => article.url}= article.title
-    %time= article.date.strftime('%b %e %Y')
-    %h4= article.summary
+    %time= article.date.strftime('%B %e, %Y')
+    .summary
+      %h4= article.summary
     .more
       %a{:href => article.url} read on »

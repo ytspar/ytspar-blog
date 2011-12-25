@@ -1,7 +1,7 @@
 %article.hentry
   %h2.entry-title
     = current_article_title
-  %time.updated{:pubdate => ""}= current_article_date.strftime('%b %e %Y')
+  %time.updated{:pubdate => ""}= current_article_date.strftime('%B %e, %Y')
   .entry-content
     = yield_content :blog_article
 %aside
@@ -9,6 +9,6 @@
     - data.blog.articles[0...10].each do |article|
       %li
         %a{:href => article.url}= article.title
-        %span= article.date.strftime('%b %e')  
+        %span= article.date.strftime('%B %e, %Y') 
   - if settings.disqus
     = partial :disqus
