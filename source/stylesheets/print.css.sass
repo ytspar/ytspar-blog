@@ -1,6 +1,10 @@
 // Imports -------------------------------------------------------------------
 
-@import base
+@import partials/base
+@import compass/utilities/print
+
++print-utilities
+
 
 // Fonts ---------------------------------------------------------------------
 
@@ -9,7 +13,7 @@ $base-line-height : $base-font-size*1.5
 
 // Colors --------------------------------------------------------------------
 
-$base : $dark
+$base : $text-color
 $alt  : #336
 
 /* Print Defaults ------------------------------------------------------------
@@ -24,7 +28,7 @@ nav
   text-shadow: none !important
 
 body
-  +serif-family
+  font-family: $alternate-text-font
   font-size: $base-font-size
   line-height: $base-line-height
   background: white

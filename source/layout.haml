@@ -41,6 +41,10 @@
     %link{:href => "/stylesheets/print.css", :media => "print", :rel => "stylesheet"}
     
     = javascript_include_tag("/javascripts/jquery-1.7.1.min.js", "/javascripts/modernizr-1.6.min.js", "/javascripts/modernizr.selectors.js", "/javascripts/application.js")
+    
+    -#- if settings.disqus_production
+    -#  :javascript
+    -#    var disqus_developer = 0;
 
 
   %body
@@ -60,7 +64,7 @@
         - else
           = yield
 
-    %footer#footer{:role => "contentinfo"}
+    %footer#footer.noprint{:role => "contentinfo"}
       #hcard-yury-tsukerman.author.vcard
         %p
           %a.fn.url{:href => "http://twitter.com/ytspar"} @ytspar
