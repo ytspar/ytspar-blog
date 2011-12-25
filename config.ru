@@ -15,7 +15,7 @@ Middleman::Builder.start
     
 use Rack::Static, 
   #:urls => ["/stylesheets", "/images", "/javascripts"],
-  :urls => [""],
+  :urls => [/./],
   :root => "public"    
 
 run lambda { |env|
