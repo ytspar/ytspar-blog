@@ -15,7 +15,6 @@ use Rack::TryStatic,
 
 run lambda { [404, {'Content-Type' => 'text/html'}, ['whoops! Not Found']] }
 
-
 # Look for index files in folders like Apache
 # require "rack/contrib/try_static"
 # use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html', 'index.html', '/index.html']
