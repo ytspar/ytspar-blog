@@ -14,8 +14,8 @@ Middleman::Builder.start
 #     :try => ['.html', 'index.html', '/index.html']
     
 use Rack::Static, 
-  # :urls => ["/stylesheets", "/images", "/javascripts"],
-  :urls => %w[/],
+  #:urls => ["/stylesheets", "/images", "/javascripts"],
+  :urls => [""],
   :root => "public"    
 
 run lambda { |env|
