@@ -9,24 +9,15 @@ require "middleman/builder"
 Middleman::Builder.start
 
 use Rack::TryStatic,
-     :root => "build",
-     :urls => %w[/],
-     :try => ['.html', 'index.html', '/index.html']
+  :root => "build",
+  :urls => %w[/],
+  :try => ['.html', 'index.html', '/index.html']
     
 # use Rack::Static, 
 #  :urls => ["/stylesheets", "/images", "/javascripts", "/archives", "/articles", "/feed.xml", "/robots.txt", "/humans.txt"],
 #  :root => "build"    
 
-run lambda { |env|
-  [
-    200, 
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => 'public, max-age=86400' 
-    },
-    File.open('build/index.html', File::RDONLY)
-  ],
-  
+run lambda {
   [
     404,
     {
