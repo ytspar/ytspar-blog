@@ -1,4 +1,4 @@
-set :build_dir, "public"
+set :build_dir, "build"
 
 require "susy"
 
@@ -6,7 +6,7 @@ require "lib/custom_helpers"
 helpers CustomHelpers
 
 activate :blog
-# set :blog_permalink, ":year/:month/:day/:title.html"
+  set :blog_permalink, "articles/:year/:month/:day/:title.html"
 # set :blog_summary_separator, /READMORE/
 # set :blog_summary_length, 500
 set :blog_layout_engine, "haml"

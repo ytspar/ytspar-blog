@@ -6,6 +6,7 @@ gem "compass-susy-plugin"
 gem "rack-contrib"
 gem "therubyracer-heroku"
 gem "RedCloth"
+gem "json_pure", "~> 1.6.4"
 
 group :development do
   gem "heroku"
