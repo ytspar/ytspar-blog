@@ -32,7 +32,7 @@
       %title
         = current_article_title
         &laquo; Yury Tsukerman
-    - if content_for?(:title)
+    - elsif content_for?(:title)
       %title
         = yield_content :title
         &laquo; Yury Tsukerman
