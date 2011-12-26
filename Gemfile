@@ -11,5 +11,6 @@ gem "json_pure", "~> 1.6.4"
 group :development do
   gem "heroku"
   gem "unicorn"
+  gem "rake", "~> 0.9.2.2"
 end
 
