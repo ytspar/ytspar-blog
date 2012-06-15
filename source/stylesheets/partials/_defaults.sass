@@ -117,6 +117,29 @@ p.colophon
     &.my
       background-color: $holmesred
 
+.more
+  margin: 2em 0 5em 0
+  a
+    border: 1px solid soften($quiet-color, 1)
+    padding: 0.5em 1em
+    +single-box-shadow(#FFF, 0, 1px, 0, 1px)
+
+.hashtag
+  color: $quiet-color
+
+.content .archives
+  article
+    display: block
+    width: 100%
+    float: left
+    time
+      width: 45%
+      margin-right: 5%
+      float: left
+    header
+      width: 50%
+      float: left
+
 // Ugly hack to hide duplicate h4s if I open up a blog post with that tag. Summary should really strip tags.
 article .summary h4:first-child
   display: none

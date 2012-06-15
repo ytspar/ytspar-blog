@@ -6,7 +6,7 @@
     = yield_content :blog_article
 %aside
   %ol
-    - data.blog.articles[0...10].each do |article|
+    - data.blog.articles[0...1].each do |article|
       %li
         %a{:href => article.url}= article.title
         %span= article.date.strftime('%B %e, %Y') 

@@ -2,8 +2,13 @@
 
 %h2 Archived posts
 %h3 &nbsp;
-%ul.archives
-  - for entry in data.blog.articles
-    %li
-      %a{:href => entry.url}= entry.title
-      %span= entry.date.strftime('%B %e, %Y')
+.archives
+  - for entry in data.blog.articles    
+    %article
+      %time{ :datetime => "#{entry.date.strftime('%Y-%m-%dT%H:%M:%S%z')}", :pubdate => "pubdate" }
+        = entry.date.strftime('%B %e, %Y')
+      %header
+        %a{ :href => entry.url }
+          = entry.title
+          
+          
