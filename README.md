@@ -4,6 +4,10 @@ This blog runs on [Middleman](https://github.com/middleman/middleman) and uses [
 
 Heroku deployment.
 
+### Demo
+
+See [ytspar.heroku.com](http://ytspar.heroku.com/)
+
 ## Screenshots
 
 [![Mobile version](http://dl.dropbox.com/u/225019/rm-app-screenshots/yurytsukerman/thumb_Typography%20test%20%C2%AB%20Yury%20Tsukerman%203.png)](http://dl.dropbox.com/u/225019/rm-app-screenshots/yurytsukerman/thumb_Typography%20test%20%C2%AB%20Yury%20Tsukerman%203.png)
